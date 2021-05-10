@@ -70,7 +70,7 @@ This is our final step. We need to change the api driver from default token to p
     ]
 ]
 ```
-
+<br>
 
 ### We are done!
 
@@ -81,5 +81,6 @@ This is our final step. We need to change the api driver from default token to p
 <a href="https://github.com/nhrrob/laravel-7-api-crud">https://github.com/nhrrob/laravel-7-api-crud</a>
 
 
+<br>
 
 ### <a href='https://github.com/nhrrob/laravelwiki'>Back to Laravel Wiki</a>
