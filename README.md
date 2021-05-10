@@ -14,6 +14,7 @@ A wiki for Laravel. Covers issue solutions as well as basic concepts of Laravel.
 
 
 ## Topics
+- <a href="https://github.com/nhrrob/crudgenerator" target="_blank">NHRRob Crud Generator</a>
 - <a href="https://github.com/nhrrob/laravelwiki/blob/master/laravel-passport-installation.md" target="_blank">Laravel Passport Installation (to Manage API Auth)</a>
 - <a href="https://github.com/nhrrob/laravelwiki/blob/master/restful-api-crud-with-passport.md" target="_blank">Building a Restful Api Crud with Passport</a>
 - <a href="https://gist.github.com/nhrrob/fbc0857c3b5ed8c03ca8cc4ebdead749" target="_blank">Gist: API Auth Routes (Laravel Passport)</a>
