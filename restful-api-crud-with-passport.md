@@ -93,13 +93,13 @@ Route::group(['namespace'=>'Api'], function () {
 - Add bearer token in Authorization tab: Select type bearer token and add your token as value
 - In Headers tab: 
 ```
-Add Content-Type => application/json  
-Add Accept => application/json
+Add: Content-Type => application/json  
+Add: Accept => application/json
 ```
 - In Body tab:
 ```
-Select x-www-form-urlencode
-Add title=> "your demo title"
+Select: x-www-form-urlencode
+Add: title=> "your demo title"
 ```
 - Now you should be able to send and fetch all requests.
 
