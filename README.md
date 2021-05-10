@@ -14,7 +14,7 @@ A wiki for Laravel. Covers issue solutions as well as basic concepts of Laravel.
 
 
 ## Topics
-- Passport Installation (To Manage API Auth)
+- <a href="https://github.com/nhrrob/laravelwiki/blob/master/passport-installation.md">Passport Installation (To Manage API Auth)</a>
 
 
 ## License
