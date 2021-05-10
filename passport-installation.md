@@ -17,11 +17,13 @@ composer require laravel/passport "~9.0"
 ``` 
 php artisan migrate 
 ```
+<br>
 
 #### Step 3. **Generate personal access token:** <br>
 ``` 
 php artisan passport:install 
 ```
+<br>
 
 #### Step 4. **Include HasApiTokens trait:**
 Add HasApiTokens trait in your User Model:
@@ -36,6 +38,7 @@ Dont forget to import HasApiTokens. <br>
 ``` 
 use Laravel\Passport\HasApiTokens; 
 ```
+<br>
 
 #### Step 5. **Call the passport routes in AuthServiceProvider** <br>
 Path: **App/Providers/AuthServiceProvider.php**<br>
@@ -51,6 +54,7 @@ use Laravel\Passport\Passport;
 
 - **Uncomment** the policies added in the protected method **$policies** <br>
 Example: **'App\Models\Model' => 'App\Policies\ModelPolicy',**
+<br>
 
 #### Step 6. **Set the Driver:** <br>
 This is our final step. We need to change the api driver from default token to passport.<br>
