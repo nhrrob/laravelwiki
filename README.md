@@ -14,7 +14,7 @@ A wiki for Laravel. Covers issue solutions as well as basic concepts of Laravel.
 
 
 ## Topics
-- <a href="https://github.com/nhrrob/laravelwiki/blob/master/passport-installation.md" target="_blank">Laravel Passport Installation (to Manage API Auth)</a>
+- <a href="https://github.com/nhrrob/laravelwiki/blob/master/laravel-passport-installation.md" target="_blank">Laravel Passport Installation (to Manage API Auth)</a>
 - <a href="https://github.com/nhrrob/laravelwiki/blob/master/restful-api-crud-with-passport.md" target="_blank">Building a Restful Api Crud with Passport</a>
 
 ## License
