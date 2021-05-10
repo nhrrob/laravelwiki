@@ -65,7 +65,7 @@ Route::post('login', [AuthController::class, 'login']);
 
 Route::group(['middleware' => ['auth:api']], function () {
     Route::post('/logout', [AuthController::class, 'logout']);
-    Route::get('/products/search/{name}', [ProductController::class, 'search']);
+    Route::get('/products/search/{title}', [ProductController::class, 'search']);
 });
 Route::apiResource('products', ProductController::class)->middleware('auth:api');
 ```
@@ -78,7 +78,7 @@ Route::group(['namespace'=>'Api'], function () {
     
     Route::group(['middleware' => ['auth:api']], function () {
         Route::post('/logout', 'AuthController@logout');
-        Route::get('/products/search/{name}', 'ProductController@search');
+        Route::get('/products/search/{title}', 'ProductController@search');
         Route::apiResource('products', 'ProductController');
     });
 });
