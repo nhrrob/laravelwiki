@@ -22,7 +22,7 @@ Replace comma with semicolon if there is no more trait <br><br>
 Dont forget to import HasApiTokens. <br> 
 ``` use Laravel\Passport\HasApiTokens; ```
 
-4. Call the passport routes in AuthServiceProvider <br>
+5. Call the passport routes in AuthServiceProvider <br>
 Path: **App/Providers/AuthServiceProvider.php**<br>
 - Add in **boot** method <br>
 ``` Passport::routes(); ```
@@ -33,7 +33,7 @@ Path: **App/Providers/AuthServiceProvider.php**<br>
 - **Uncomment** the policies added in the protected method **$policies** <br>
 Example: **'App\Models\Model' => 'App\Policies\ModelPolicy',**
 
-5. Set the Driver: <br>
+6. Set the Driver: <br>
 This is our final step. We need to change the api driver from default token to passport.<br>
 - Go to **config\auth.php** and locate the **guards** array. In the **api key**, change the driver from **token** to **passport** <br>
 
