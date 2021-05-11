@@ -50,8 +50,14 @@ Note: For Linux and MacOS only
 <br>
 
 
-#### Step 4. TBA
-- 
+#### Step 4. Laravel Auth Setup
+We will use laravel default auth
+- Laravel 8
+```
+
+```
+- Laravel 7 (Older version)
+
 
 <br>
 
