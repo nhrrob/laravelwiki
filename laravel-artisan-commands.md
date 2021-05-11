@@ -1,19 +1,3 @@
-### Bonus 2:
-- You can always run below commands
-```
-php artisan optimize:clear
-sudo chmod -R 0777 storage/
-sudo chmod -R 0777 bootstrap/cache
-php artisan cache:clear
-php artisan config:clear
-php artisan route:clear
-php artisan view:clear
-composer dump-autoload
-php artisan --version
-```
-
-<br>
-
 ## Laravel Artisan Commands
 
 <br/>Date: May 11, 2021 <br/>
