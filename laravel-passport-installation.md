@@ -30,7 +30,7 @@ php artisan passport:install
 #### Step 4. **Include HasApiTokens trait:**
 Add HasApiTokens trait in your User Model:
 - Laravel 8: **App\Models\User.php**
-- Laravel 7 or old: **App\Models\User.php**<br>
+- Laravel 7 or old: **App\User.php**<br>
 ``` 
 use HasApiTokens,
 ```
