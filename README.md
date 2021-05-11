@@ -16,7 +16,7 @@ A wiki for Laravel. Covers issue solutions as well as basic concepts of Laravel.
 
 
 ## Topics
-- <a href="https://github.com/nhrrob/crudgenerator" target="_blank">Laravel Crud Generator</a>
+- <a href="https://github.com/nhrrob/crudgenerator" target="_blank">Package: Laravel Crud Generator</a>
 
 - <a href="https://github.com/nhrrob/laravelwiki/blob/master/laravel-from-scratch.md" target="_blank">Laravel from Scratch</a>
 
