@@ -7,19 +7,53 @@ Note: *For sample code follow repository mentioned below (at the end)* <br>
 
 
 ### Steps
-#### Step 1. TBA 
-- TBA
+#### Step 1. Install Laravel 
+- Laravel 8
+<br>Note: If laravel installed globally (```composer global require laravel/installer```)
+```
+laravel new blog
+```
+
+- Laravel 7 (older version)
+
+```
+composer create-project --prefer-dist laravel/laravel:^7.0 blog
+```
 
 <br>
 
 
-#### Step 2. TBA
-- TBA
+#### Step 2. Add DB settings in .env file
+- Create DB and Add in .env file
 
 <br>
 
 
+#### Step 2.1 (Optional) Create virtual host
+- Create vhost for  projectpath/public folder
+- Browse example.rob (virtual host)
+- You can also ignore vhost and simply run
+```
+php artisan serve
+```
+<br>
 
+
+#### Step 3. Add permission to storage folder
+- Storage folder needs write permission
+```
+sudo chmod -R 0777 storage/
+```
+Note: For Linux and MacOS only
+
+- Now, you should be able to access project url (vhost or serve url)
+<br>
+
+
+#### Step 4. TBA
+- 
+
+<br>
 
 
 ### We are done!
@@ -35,53 +69,7 @@ php artisan passport:install
 ```
 <br>
 
-### Bonus: Resource Routes
-- Login: 
-<br>Param: email (admin@admin.com) and password (password). 
-<br>Get Bearer token
-```
-POST /api/login
-```
-
-- All Products: 
-<br>Param: No parameter needed 
-<br>View list of products
-```
-GET /api/products
-```
-
-- Create Product:
-<br>Param: title 
-<br>View new created product
-```
-POST /api/products
-```
-
-- Edit Product:
-<br>Param: title 
-<br>View new edited product
-```
-PUT /api/products/1
-```
-
-- View Single Product:
-<br>Param: No parameter needed 
-<br>View single product
-```
-GET /api/products/1
-```
-
-- Delete a Product:
-<br>Param: No parameter needed 
-<br>View deleted product
-```
-DELETE /api/products/1
-```
-
-<br>
-
-
-### Bonus 2:
+### Bonus:
 - You can always run below commands
 ```
 php artisan optimize:clear
