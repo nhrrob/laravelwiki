@@ -31,9 +31,8 @@ A wiki for Laravel. Covers issue solutions as well as basic concepts of Laravel.
 <a href="https://github.com/nhrrob/laravel-8-api-crud" target="_blank">https://github.com/nhrrob/laravel-8-api-crud </a> <br>
 <a href="https://github.com/nhrrob/laravel-7-api-crud" target="_blank">https://github.com/nhrrob/laravel-7-api-crud</a><br>
 
-- Two basic crud repositories: <br>
-<a href="https://github.com/nhrrob/laravel-8-crud" target="_blank">https://github.com/nhrrob/laravel-8-crud </a> 
-<br>
+- Two basic crud repositories:<br>
+<a href="https://github.com/nhrrob/laravel-8-crud" target="_blank">https://github.com/nhrrob/laravel-8-crud </a><br>
 <a href="https://github.com/nhrrob/laravel-7-crud" target="_blank">https://github.com/nhrrob/laravel-7-crud</a><br>
 
 - Laravel Get Started Project: <br>
