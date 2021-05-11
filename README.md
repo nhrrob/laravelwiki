@@ -1,8 +1,5 @@
 <p align="center"><a href="https://nazmulrobin.com" target="_blank"><img src="http://laravel.nazmulrobin.com/images/nhrrob/nhrblog-logo-white.png" width="400"></a></p>
 
-<br>
-
-
 <p align="center">
 <a href="https://github.com/nhrrob/laravelwiki/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/nhrrob/laravelwiki"></a>
 <a href="https://github.com/nhrrob/laravelwiki/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/nhrrob/laravelwiki"></a>
@@ -10,9 +7,6 @@
 <a href="https://github.com/nhrrob/laravelwiki/blob/master/LICENSE.md"><img alt="GitHub license" src="https://img.shields.io/github/license/nhrrob/laravelwiki"></a>
 
 </p>
-
-<br>
-
 
 ## Laravel Wiki
 
