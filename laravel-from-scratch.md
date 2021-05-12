@@ -197,8 +197,8 @@ Link: <a href="https://github.com/nhrrob/laravelwiki/blob/master/restful-api-cru
 #### Step 12. Update crudgenerator stub files (Adding Layout)
 - Now we will add layout to crudgenerator stub files. Doing so, our future crud generated files will automatically have site default design. So we dont need to do anything on view files regarding layout design
 
-- Follow this repo to get updated stub files (resources/stubs)
-
+- Follow this repo to get updated stub files (resources/stubs=>
+update model_snake folder to add design/layout)
 <br>Laravel Get Started Project:
 <a href="https://github.com/nhrrob/laravel-get-started-project" target="_blank">https://github.com/nhrrob/laravel-get-started-project</a>
 
