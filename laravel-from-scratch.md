@@ -238,22 +238,75 @@ update model_snake folder to add design/layout)
     ```
     - Now, manually remove migration file
     - Remove demo crud related routes from web.php and api.php
-<br>
-
-
-### Congratulations!
-- visit product page and see your default layout design
-``` siteurl/products ```
 
 <br>
 
 
-#### Step 12. Update crudgenerator's stub files (Adding Layout)
-- For future cruds lets update stub files (adding default layout)
+#### Step 14. Update Folder Structure
+- Admin folder: For Controllers and resources/views
+- admin: prefix of url and route name
 
-- Follow this repo to get the default layout (resources/stubs)
-<br>Laravel Get Started Project:
-<a href="https://github.com/nhrrob/laravel-get-started-project" target="_blank">https://github.com/nhrrob/laravel-get-started-project</a>
+- Update routes (web and api): 
+    - Api (routes/api.php): Sample code
+    ```
+    Route::group([ 'namespace'=> 'App\Http\Controllers\Api\Admin', 'prefix' => 'admin',  'as'=>'admin.', 'middleware' => ['auth:api'] ], function () {
+        Route::get('/products/search/{title}', 'ProductController@search');
+        Route::apiResource('products', 'ProductController');
+    });
+    ```
+     - Web (routes/web.php): Sample code
+    ```
+    Route::group([ 'namespace'=> 'App\Http\Controllers\Admin', 'prefix' => 'admin',  'as'=>'admin.', 'middleware' => 'auth' ], function () { 
+        Route::resource('products', 'ProductController'); 
+    });
+    ```   
+
+- Add admin folder for views and Admin folder for controllers (including Api)
+    - Sample File/Folder Structure:
+
+    ```
+    #Controllers
+    app/Http/Controllers/
+    app/Http/Controllers/Admin
+    
+    #Views
+    resources/views/
+    resources/views/admin
+    
+    ------------------------------
+
+    #API Controllers
+    app/Http/Controllers/Api
+    app/Http/Controllers/Api/Admin
+    ```
+    - Update namespace and Import class where needed.
+    - Add **admin** prefix in view() and route names within **Controllers**.
+    - Add **admin** prefix in route names within **view blade files**.
+
+
+<br>Hurray! We have successfully added admin prefix for our project.
+
+<br>
+
+
+#### Step 15. Lets Update Stub files for future cruds
+- Now, we will update crud generator related stub files. So, when we generate crud everything should work fine with prefix admin. Also files under Admin folder in case of backend.
+
+- For frontend, we can again update stub files (just removing Admin and admin)
+- Sample code can be found here:
+<br>Laravel Get Started Project => <a href="https://github.com/nhrrob/laravel-get-started-project" target="_blank">https://github.com/nhrrob/laravel-get-started-project</a>
+
+<br>
+
+
+#### Step 16. TBA
+- TBA
+
+<br>
+
+
+#### Step 99. TBA
+- TBA
 
 <br>
 
