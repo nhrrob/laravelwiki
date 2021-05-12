@@ -18,7 +18,7 @@ A wiki for Laravel. Covers issue solutions as well as basic concepts of Laravel.
 ## Topics
 - <a href="https://github.com/nhrrob/crudgenerator" target="_blank">Package: Laravel Crud Generator</a>
 
-- <a href="https://github.com/nhrrob/laravelwiki/blob/master/laravel-from-scratch.md" target="_blank">Laravel from Scratch</a>
+- <a href="https://github.com/nhrrob/laravelwiki/blob/master/laravel-from-scratch.md" target="_blank">Laravel from Scratch (Building Laravel Get Started Project)</a>
 
 - <a href="https://github.com/nhrrob/laravelwiki/blob/master/laravel-passport-installation.md" target="_blank">Laravel Passport Installation (to Manage API Auth)</a>
 
