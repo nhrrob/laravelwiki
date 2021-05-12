@@ -205,6 +205,42 @@ update model_snake folder to add design/layout)
 <br>
 
 
+#### Step 13. Test Crud Generator : New Layout/Design
+1. Generate a Demo Crud
+
+    - Run crud generator command
+    ```
+    php artisan crud:generator
+    ```
+    Note: provide mode title=> Demo
+
+    - Add title field in migration file
+    ```
+    $table->string('title');
+    ```
+
+    - Run migration
+    ```
+    php artisan migrate
+    ```
+
+    - Browse siteurl/demos.
+
+    - Test Rest api too.
+
+    <br>
+    Congrats! Now your all new cruds will have site default design.
+
+2. Delete Demo Crud files
+    - Run delete command to delete all files at a time.
+    ```
+    php artisan crud:generator:delete
+    ```
+    - Now, manually remove migration file
+    - Remove demo crud related routes from web.php and api.php
+<br>
+
+
 ### Congratulations!
 - visit product page and see your default layout design
 ``` siteurl/products ```
