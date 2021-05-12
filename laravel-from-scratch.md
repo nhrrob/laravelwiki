@@ -296,18 +296,44 @@ update model_snake folder to add design/layout)
 - Sample code can be found here:
 <br>Laravel Get Started Project => <a href="https://github.com/nhrrob/laravel-get-started-project" target="_blank">https://github.com/nhrrob/laravel-get-started-project</a>
 
+**Note: For future crud routes: we neeed to cut and paste within the route group**
 <br>
 
 
-#### Step 16. TBA
-- TBA
+#### Step 16. Lets generate another crud (to test stub changes) 
+- As we changed stub files, now everything should work fine with proper namespace and route names as well as view path.
+```
+php artisan crud:generator
+```
+- Model Title: Project
+- Add title field in migration file
+```
+$table->string('title');
+```
+- Run migration and seed demo data
+```
+php artisan migrate:fresh --seed
+php artisan passport:install
+```
+- Route: Cut and paste generated route lines into the route group (prefix: admin)
+<br>Update controller name keeping only the name; no namespace as it is added in the route group
 
+- Move controllers under Admin and Api\Admin folders (check namespace too)
+- Move view folder ```project``` into admin
+- Lets browse siteurl/admin/projects; Also check api using postman.
 <br>
 
 
-#### Step 99. TBA
-- TBA
+#### Step 17. Add NHR CSS Helper 
+- Copy below gist code to resources/css/nhrrob-css-helper.css file
+<br>CSS Link: <a href="https://gist.github.com/nhrrob/ce5ef7e921104feff1fc3bb8c06c75f3" target="_blank">Gist: NHRRob CSS Helper</a> 
 
+-  Add Helper CSS in your main layout (views/layouts/app.blade.php)
+```
+<link href="{{ asset('css/nhrrob-css-helper.css') }}" rel="stylesheet">
+```
+- To test helper css: Example classes=> p-0, p-1, p-2, p-3, p-4 
+<br>(p-0 means padding: 0; 1 means 10px; 2= 20px) 
 <br>
 
 
