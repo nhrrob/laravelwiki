@@ -133,8 +133,11 @@ clear
 - Thanks to <a href="https://github.com/nhrrob/crudgenerator" target="_blank">nhrrob/crudgenerator</a> to make it happen!
 ```
 php artisan crud:generator
+php artisan crud:generator --admin
 ```
-- Add title field in migration file
+<br>Note: --admin creates crud under Admin folder
+
+- Add title field in migration files
 ```
 $table->string('title');
 ```
@@ -194,116 +197,21 @@ Link: <a href="https://github.com/nhrrob/laravelwiki/blob/master/restful-api-cru
 
 <br>
 
-#### Step 12. Update crudgenerator stub files (Adding Layout)
-- Now we will add layout to crudgenerator stub files. Doing so, our future crud generated files will automatically have site default design. So we dont need to do anything on view files regarding layout design
 
-- Follow this repo to get updated stub files (resources/stubs=>
-update model_snake folder to add design/layout)
-<br>Laravel Get Started Project:
-<a href="https://github.com/nhrrob/laravel-get-started-project" target="_blank">https://github.com/nhrrob/laravel-get-started-project</a>
+#### Step 12. Lets Update Stub files for future cruds
+- Now, we will update crud generator related stub files. So, future cruds will have our project default layout 
 
-<br>
-
-
-#### Step 13. Test Crud Generator : New Layout/Design
-1. Generate a Demo Crud
-
-    - Run crud generator command
-    ```
-    php artisan crud:generator
-    ```
-    Note: provide mode title=> Demo
-
-    - Add title field in migration file
-    ```
-    $table->string('title');
-    ```
-
-    - Run migration
-    ```
-    php artisan migrate
-    ```
-
-    - Browse siteurl/demos.
-
-    - Test Rest api too.
-
-    <br>
-    Congrats! Now your all new cruds will have site default design.
-
-2. Delete Demo Crud files
-    - Run delete command to delete all files at a time.
-    ```
-    php artisan crud:generator:delete
-    ```
-    - Now, manually remove migration file
-    - Remove demo crud related routes from web.php and api.php
-
-<br>
-
-
-#### Step 14. Update Folder Structure
-- Admin folder: For Controllers and resources/views
-- admin: prefix of url and route name
-
-- Update routes (web and api): 
-    - Api (routes/api.php): Sample code
-    ```
-    Route::group([ 'namespace'=> 'App\Http\Controllers\Api\Admin', 'prefix' => 'admin',  'as'=>'admin.', 'middleware' => ['auth:api'] ], function () {
-        Route::get('/products/search/{title}', 'ProductController@search');
-        Route::apiResource('products', 'ProductController');
-    });
-    ```
-     - Web (routes/web.php): Sample code
-    ```
-    Route::group([ 'namespace'=> 'App\Http\Controllers\Admin', 'prefix' => 'admin',  'as'=>'admin.', 'middleware' => 'auth' ], function () { 
-        Route::resource('products', 'ProductController'); 
-    });
-    ```   
-
-- Add admin folder for views and Admin folder for controllers (including Api)
-    - Sample File/Folder Structure:
-
-    ```
-    #Controllers
-    app/Http/Controllers/
-    app/Http/Controllers/Admin
-    
-    #Views
-    resources/views/
-    resources/views/admin
-    
-    ------------------------------
-
-    #API Controllers
-    app/Http/Controllers/Api
-    app/Http/Controllers/Api/Admin
-    ```
-    - Update namespace and Import class where needed.
-    - Add **admin** prefix in view() and route names within **Controllers**.
-    - Add **admin** prefix in route names within **view blade files**.
-
-
-<br>Hurray! We have successfully added admin prefix for our project.
-
-<br>
-
-
-#### Step 15. Lets Update Stub files for future cruds
-- Now, we will update crud generator related stub files. So, when we generate crud everything should work fine with prefix admin. Also files under Admin folder in case of backend.
-
-- For frontend, we can again update stub files (just removing Admin and admin)
 - Sample code can be found here:
 <br>Laravel Get Started Project => <a href="https://github.com/nhrrob/laravel-get-started-project" target="_blank">https://github.com/nhrrob/laravel-get-started-project</a>
 
-**Note: For future crud routes: we neeed to cut and paste within the route group**
 <br>
 
 
-#### Step 16. Lets generate another crud (to test stub changes) 
-- As we changed stub files, now everything should work fine with proper namespace and route names as well as view path.
+#### Step 13. Lets generate another crud (to test stub changes) 
+- As we changed stub files, now everything should work fine with project default layout.
 ```
 php artisan crud:generator
+php artisan crud:generator --admin
 ```
 - Model Title: Project
 - Add title field in migration file
@@ -315,16 +223,13 @@ $table->string('title');
 php artisan migrate:fresh --seed
 php artisan passport:install
 ```
-- Route: Cut and paste generated route lines into the route group (prefix: admin)
-<br>Update controller name keeping only the name; no namespace as it is added in the route group
+- Backend: Lets browse siteurl/admin/projects; Also check api using postman.
+- Frontend: Lets browse siteurl/projects; Also check api using postman.
 
-- Move controllers under Admin and Api\Admin folders (check namespace too)
-- Move view folder ```project``` into admin
-- Lets browse siteurl/admin/projects; Also check api using postman.
 <br>
 
 
-#### Step 17. Add NHR CSS Helper 
+#### Step 14. Add NHR CSS Helper 
 - Copy below gist code to resources/css/nhrrob-css-helper.css file
 <br>CSS Link: <a href="https://gist.github.com/nhrrob/ce5ef7e921104feff1fc3bb8c06c75f3" target="_blank">Gist: NHRRob CSS Helper</a> 
 
@@ -334,6 +239,13 @@ php artisan passport:install
 ```
 - To test helper css: Example classes=> p-0, p-1, p-2, p-3, p-4 
 <br>(p-0 means padding: 0; 1 means 10px; 2= 20px) 
+
+<br>
+
+
+#### Step 15. TBA
+- TBA
+
 <br>
 
 
