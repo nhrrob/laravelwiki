@@ -1,88 +1,76 @@
-## Laravel Passport Installation (To Manage API Auth)
+## Spatie Laravel Permission Setup (Install and Configuration)
 
-<br/>Date: May 10, 2021 <br/>
+<br/>Date: May 13, 2021 <br/>
 
 ### Steps
 #### Step 1. **Install package:** 
-- Laravel latest version: <br>
-``` 
-composer require laravel/passport 
+- Install command:
 ```
-- Laravel old versions (Ex. Laravel 7): <br> 
-``` 
-composer require laravel/passport "~9.0" 
+composer require spatie/laravel-permission
+php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+sudo chmod -R 0777 storage/
+php artisan optimize:clear
+php artisan migrate
 ```
-- Doc: https://laravel.com/docs/7.x/passport 
+
 <br>
 
-#### Step 2. **Run migration:** <br>
+
+#### Step 2. Add **HasRoles** trait on User model (Also import spatie class)
 ``` 
-php artisan migrate 
+use HasRoles,
 ```
+
 <br>
 
-#### Step 3. **Generate personal access token:** <br>
-``` 
-php artisan passport:install 
+
+#### Step 3. Add RolesAndPermissionsSeeder and UserSeeder
+- Create Seeder Files
 ```
+php artisan make:seeder RolesAndPermissionsSeeder
+php artisan make:seeder UserSeeder
+```
+- Include RolesAndPermissionsSeeder and UserSeeder in DatabaseSeeder file
+<br>(Also comment out existing User::create() code in DatabaseSeeder class; As we will use spatie now to create user and assign permission)
+```
+$this->call(RolesAndPermissionsSeeder::class);
+$this->call(UserSeeder::class);
+```
+
+- Update RolesAndPermissionsSeeder and UserSeeder
+Link: <a href="https://github.com/nhrrob/laravel-get-started-project">https://github.com/nhrrob/laravel-get-started-project</a>
+
 <br>
 
-#### Step 4. **Include HasApiTokens trait:**
-Add HasApiTokens trait in your User Model:
-- Laravel 8: **App\Models\User.php**
-- Laravel 7 or old: **App\User.php**<br>
-``` 
-use HasApiTokens,
-```
-Replace comma with semicolon if there is no more trait <br><br>
-Dont forget to import HasApiTokens. <br> 
 
-``` 
-use Laravel\Passport\HasApiTokens; 
+#### Step 4: Update migration file: add group name field
+- Add group_name field on permissions table (Migration file: permissions from spatie)
 ```
+$table->string('group_name')->nullable();
+```
+- Run migration and seed
+```
+php artisan migrate:fresh --seed
+```
+
 <br>
 
-#### Step 5. **Call the passport routes in AuthServiceProvider** <br>
-Path: **App/Providers/AuthServiceProvider.php**<br>
-- Add in **boot** method <br>
-``` 
-Passport::routes(); 
+
+#### Step 5: Basic Usage (in controller)
+- Add below code in your crud controller **__construct** method
+<br>Example: **user** permission group
 ```
-
-- Dont forget to import the passport class <br>
-``` 
-use Laravel\Passport\Passport; 
+$this->middleware('permission:user list')->only('index');
+$this->middleware('permission:user create')->only(['create', 'store']);
+$this->middleware('permission:user view')->only('view');
+$this->middleware('permission:user edit')->only(['edit', 'update']);
+$this->middleware('permission:user delete')->only('destroy');
 ```
-
-- **Uncomment** the policies added in the protected method **$policies** <br>
-Example: **'App\Models\Model' => 'App\Policies\ModelPolicy',**
-<br>
-
-#### Step 6. **Set the Driver:** <br>
-This is our final step. We need to change the api driver from default token to passport.<br>
-- Go to **config\auth.php** and locate the **guards** array. In the **api key**, change the driver from **token** to **passport** <br>
-
-- Should look like this (Ex. Laravel 8):
-```
-'guards' => [
-    'web' => ...
-    'api' => [
-        'driver' => 'passport',
-        ...
-    ]
-]
-```
-<br>
-
 ### We are done!
 
-- Congratulations! You have successfully setup and configure Laravel Passport. <br>
-
-- To build a restful api crud feel free to follow this repo: <br>
-<a href="https://github.com/nhrrob/laravel-8-api-crud">https://github.com/nhrrob/laravel-8-api-crud </a> <br>
-<a href="https://github.com/nhrrob/laravel-7-api-crud">https://github.com/nhrrob/laravel-7-api-crud</a>
-
+- Congratulations! You have successfully setup and configured Spatie Laravel Permission.
 
 <br>
+
 
 ### <a href='https://github.com/nhrrob/laravelwiki'>Back to Laravel Wiki</a>

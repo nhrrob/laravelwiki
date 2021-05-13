@@ -244,11 +244,13 @@ php artisan passport:install
 
 
 #### Step 15. Spatie Laravel Permission Setup
-- Help link: 
-<br>Prerequisite: <a href="https://spatie.be/docs/laravel-permission/v4/prerequisites">https://spatie.be/docs/laravel-permission/v4/prerequisites</a>
-<br>Install: <a href="https://spatie.be/docs/laravel-permission/v4/installation-laravel">https://spatie.be/docs/laravel-permission/v4/installation-laravel</a> 
+- Help link: <a href="https://github.com/nhrrob/laravelwiki/blob/master/spatie-laravel-permission-setup.md" target="_blank">Spatie Laravel Permission Setup</a>
 
-- 
+<br>
+
+
+#### Step 16. TBA
+- TBA
 
 <br>
 
