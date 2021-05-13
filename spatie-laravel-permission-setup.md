@@ -66,9 +66,26 @@ $this->middleware('permission:user view')->only('view');
 $this->middleware('permission:user edit')->only(['edit', 'update']);
 $this->middleware('permission:user delete')->only('destroy');
 ```
+
+<br>
+
+
+#### Step 6: Update app/Http/kernal.php => $routeMiddleWare
+```
+'permission' => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
+'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
+'role_or_permission' => \Spatie\Permission\Middlewares\RoleOrPermissionMiddleware::class,
+
+```
+
+Note: Dont forget to update storage folder often as spatie uses cache
+
+<br>
+
+
 ### We are done!
 
-- Congratulations! You have successfully setup and configured Spatie Laravel Permission.
+Congratulations! You have successfully setup and configured Spatie Laravel Permission.
 
 <br>
 

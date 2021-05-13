@@ -230,7 +230,7 @@ php artisan passport:install
 
 
 #### Step 14. Add NHR CSS Helper 
-- Copy below gist code to resources/css/nhrrob-css-helper.css file
+- Copy below gist code to public/css/nhrrob-css-helper.css file
 <br>CSS Link: <a href="https://gist.github.com/nhrrob/ce5ef7e921104feff1fc3bb8c06c75f3" target="_blank">Gist: NHRRob CSS Helper</a> 
 
 -  Add Helper CSS in your main layout (views/layouts/app.blade.php)
@@ -249,7 +249,49 @@ php artisan passport:install
 <br>
 
 
-#### Step 16. TBA
+#### Step 16. Add Dashboard page for all users
+- Sample code can be found here:
+<br>Laravel Get Started Project => <a href="https://github.com/nhrrob/laravel-get-started-project" target="_blank">https://github.com/nhrrob/laravel-get-started-project</a>
+
+- Check below files
+```
+- routes/web.php
+- app/Http/Controllers/Admin/DashboardController
+- resources/views/admin/dashboard/index.blade.php
+```
+
+<br>
+
+
+#### Step 17. Add style, script, admin layout
+- Createa two style files and two js files (backend and frontend)
+```
+- public/css/admin_style.css
+- public/css/style.css
+
+- public/js/admin_script.js
+- public/js/script.js
+```
+- Create resources/views/admin/layouts/app.blade.php
+add style in header and script in just before body tag.
+    - Header (beofre head tag) : Example of frontend layout
+    ```
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+    @yield('header')
+    @yield('css')
+    ```
+    - Footer (before body tag) : Example of frontend layout
+    ```
+    <script src="{{{{ asset('js/script.js') }}}}"></script>
+    @stack('js')
+    ```
+- update your view files @extend (as we are using admin.layouts.app now)
+- Update app name in your .env to "Laravel Get Started"
+<br>
+
+
+#### Step 18: TBA
 - TBA
 
 <br>
