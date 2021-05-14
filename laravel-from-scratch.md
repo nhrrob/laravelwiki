@@ -295,22 +295,38 @@ add style in header and script in just before body tag.
 - Sample code can be found here:
 <br>Laravel Get Started Project => <a href="https://github.com/nhrrob/laravel-get-started-project" target="_blank">https://github.com/nhrrob/laravel-get-started-project</a>
 
-- Permission: 
 ```
 php artisan crud:generator --admin
 ```
-- Note: we will use spatie Permission model
+- Permission Crud
     - Remove generated Permission model and permissions migration
     - Update controller with spatie permission model class
     - Update Request and Resource (replace title with name)
     - Replace title with name field in view files. Add group_name field too.
     - Add pagination support (also add in stub files too): <a href="https://github.com/nhrrob/laravelwiki">https://github.com/nhrrob/laravelwiki</a>
 
+- Role Crud
+    - Remove role migration and model files (we will use spatie)
+    - Update Controller with spatie model
+    - Replace title with name in controller and route (API); do the same for permission api too.
+    - Replace title with name in Request and Resource and view files
+    - Assigning permissions to roles : 
+    <br>Check view and controller files of laravel get started project. 
+
+- User Crud:
+    - Take a backup of User model and create user crud using crud generator
+    - remove migration file
+    - update title to name for whole crud
+    - sync Roles on store or update
+    <br>Sample code can be found here:
+    <br>Laravel Get Started Project => <a href="https://github.com/nhrrob/laravel-get-started-project" target="_blank">https://github.com/nhrrob/laravel-get-started-project</a>
+    
 <br>
 
 
-#### Step 19: TBA
-- TBA
+#### Step 19: Add Global Trait
+- Add GlobalTrait and include it in Parent Controller (which is extended by all controllers)
+- Gist link: <a href="https://github.com/nhrrob/laravelwiki">https://github.com/nhrrob/laravelwiki</a>
 
 <br>
 

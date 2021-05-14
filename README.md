@@ -28,6 +28,8 @@ A wiki for Laravel. Covers issue solutions as well as basic concepts of Laravel.
 
 - <a href="https://gist.github.com/nhrrob/ce5ef7e921104feff1fc3bb8c06c75f3" target="_blank">Gist: NHRRob CSS Helper</a>
 
+- <a href="https://gist.github.com/nhrrob/375d6457211df14b6d2489e969a01c19" target="_blank">Gist: NHRRob GlobalTrait</a>
+
 - <a href="https://github.com/nhrrob/laravelwiki/blob/master/laravel-artisan-commands.md" target="_blank">Commands: Laravel Popular Artisan Commands</a>
 
 - <a href="https://github.com/nhrrob/laravelwiki/blob/master/spatie-laravel-permission-setup.md" target="_blank">Spatie Laravel Permission Setup</a>
