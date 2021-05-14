@@ -31,6 +31,9 @@ A wiki for Laravel. Covers issue solutions as well as basic concepts of Laravel.
 - <a href="https://github.com/nhrrob/laravelwiki/blob/master/laravel-artisan-commands.md" target="_blank">Commands: Laravel Popular Artisan Commands</a>
 
 - <a href="https://github.com/nhrrob/laravelwiki/blob/master/spatie-laravel-permission-setup.md" target="_blank">Spatie Laravel Permission Setup</a>
+
+- <a href="https://github.com/nhrrob/laravelwiki/blob/master/laravel-pagination.md" target="_blank">Laravel Pagination</a>
+
 <br>
 
 

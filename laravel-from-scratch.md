@@ -291,7 +291,24 @@ add style in header and script in just before body tag.
 <br>
 
 
-#### Step 18: TBA
+#### Step 18: Add Role and Permission Crud
+- Sample code can be found here:
+<br>Laravel Get Started Project => <a href="https://github.com/nhrrob/laravel-get-started-project" target="_blank">https://github.com/nhrrob/laravel-get-started-project</a>
+
+- Permission: 
+```
+php artisan crud:generator --admin
+```
+- Note: we will use spatie Permission model
+    - Remove generated Permission model and permissions migration
+    - Update controller with spatie permission model class
+    - Update Request and Resource (replace title with name)
+    - Replace title with name field in view files. Add group_name field too.
+
+<br>
+
+
+#### Step 19: TBA
 - TBA
 
 <br>
