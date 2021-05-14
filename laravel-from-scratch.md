@@ -304,6 +304,7 @@ php artisan crud:generator --admin
     - Update controller with spatie permission model class
     - Update Request and Resource (replace title with name)
     - Replace title with name field in view files. Add group_name field too.
+    - Add pagination support (also add in stub files too): <a href="https://github.com/nhrrob/laravelwiki">https://github.com/nhrrob/laravelwiki</a>
 
 <br>
 
