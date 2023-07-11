@@ -6,8 +6,7 @@
 
 ### Steps
 #### Step 1. Create Laravel Project 
-- Create laravel project in your local. 
-<br>
+- Create laravel project in your local.
 Link: <a href="https://github.com/nhrrob/laravelwiki/blob/master/laravel-from-scratch.md">https://github.com/nhrrob/laravelwiki/blob/master/laravel-from-scratch.md</a>
 
 <br>
@@ -15,7 +14,6 @@ Link: <a href="https://github.com/nhrrob/laravelwiki/blob/master/laravel-from-sc
 
 #### Step 2. Push to a GitHub repository 
 - Popular commands 
-<br>
 Link: <a href="https://github.com/nhrrob/laravelwiki/blob/master/laravel-artisan-commands.md">https://github.com/nhrrob/laravelwiki/blob/master/laravel-artisan-commands.md</a>
 
 <br>
@@ -43,7 +41,7 @@ git clone https://username:token@github.com/nhrrob/project-name.git
 
 
 #### Step 5. Add .env file
-- - Add .env and update env details
+- Add .env and update env details
 ```
 cp .env.example .env
 nano .env
@@ -66,7 +64,7 @@ php artisan migrate:fresh --seed
 <br>
 
 
-#### Step 6. public (project) folder to public_html (live server) 
+#### Step 7. public (project) folder to public_html (live server) 
 - Copy all from public folder to public_html
 ```
 cp -a /source/. /dest/
@@ -77,12 +75,10 @@ cp -a /source/. /dest/
 
 ### We are done!
 
-- Congratulations! You have successfully deployed Laravel applicationn to live server. <br>
-
-
-### Note
+- Congratulations! You have successfully deployed Laravel applicationn to live server. 
 
 <br>
+
 
 ### Bonus:
 - You can always run below commands
