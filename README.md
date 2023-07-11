@@ -36,6 +36,10 @@ A wiki for Laravel. Covers issue solutions as well as basic concepts of Laravel.
 
 - <a href="https://github.com/nhrrob/laravelwiki/blob/master/laravel-pagination.md" target="_blank">Laravel Pagination</a>
 
+- <a href="https://github.com/nhrrob/laravelwiki/blob/master/laravel-deployment-with-github-actions-part-1.md" target="_blank">1 Laravel Deployment with Github Actions | Deploy to Live Server - cPanel - Shared Hosting - VPS</a>
+
+- <a href="https://github.com/nhrrob/laravelwiki/blob/master/laravel-deployment-with-github-actions-part-2.md" target="_blank">2 Laravel Deployment with Github Actions | Setting up Github Actions - Auto Deployment</a>
+
 <br>
 
 
