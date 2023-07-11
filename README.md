@@ -1,4 +1,4 @@
-<p align="center"><a href="https://nazmulrobin.com" target="_blank"><img src="https://nazmulrobin.com/images/nhrblog-logo-white.png" width="400"></a></p>
+<p align="center"><a href="https://nazmulrobin.com" target="_blank"><img src="https://nazmulrobin.com/images/nhrblog-logo-white.png" width="300"></a></p>
 
 <p align="center">
 <a target="_blank" href="https://github.com/nhrrob/laravelwiki/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/nhrrob/laravelwiki"></a>
