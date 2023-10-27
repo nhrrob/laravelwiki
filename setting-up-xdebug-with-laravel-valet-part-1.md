@@ -37,8 +37,8 @@ php --ini
 <br>
 
 #### Step 4. Install Xdebug using pecl
-- https://xdebug.org/docs/install
-- You can verify what your PHP's architecture is with:
+a. https://xdebug.org/docs/install
+<br>b. You can verify what your PHP's architecture is with:
 ```
 file `which php`
 ```
@@ -54,13 +54,13 @@ arch -x86_64 sudo pecl install xdebug
 ```
 sudo pecl install xdebug
 ```
-- Verify Xdebug installation => CLI:
+c. Verify Xdebug installation => CLI:
 ```
 php --version
 php --ini
 ```
-- Verify Xdebug installation => phpinfo in browser
-- If xdebug not shown, then add some code in php.ini (path same as phpinfo or, xdebug installed path - get when info shows after installation)
+d. Verify Xdebug installation => phpinfo in browser
+e. If xdebug not shown, then add some code in php.ini (path same as phpinfo or, xdebug installed path - get when info shows after installation)
 - V2
 ```
 zend_extension=xdebug.so
@@ -74,12 +74,12 @@ xdebug.mode=debug
 xdebug.start_with_request=yes
 xdebug.discover_client_host=1
 ```
-- Restart everything
+f. Restart everything
 ```
 brew services restart php
 valet restart
 ```
-- <b>Troubleshooting</b>:
+g. <b>Troubleshooting</b>:
 - Delete pecl folder if exists or failed to mkdir error on Xdebug installation
 - Copy installed Xdebug path to php.ini
 
