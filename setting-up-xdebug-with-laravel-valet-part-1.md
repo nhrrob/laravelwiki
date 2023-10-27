@@ -1,4 +1,4 @@
-## 1 Setting up Xdebug with Laravel Valet & VSCode
+## 1 Installing Xdebug on macOS, Laravel Valet & VSCode
 
 
 <br/>Date: October 27, 2023 <br/>
