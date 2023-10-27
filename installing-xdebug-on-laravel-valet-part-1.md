@@ -60,7 +60,7 @@ php --version
 php --ini
 ```
 d. Verify Xdebug installation => phpinfo in browser
-e. If xdebug not shown, then add some code in php.ini (path same as phpinfo or, xdebug installed path - get when info shows after installation)
+<br>e. If xdebug not shown, then add some code in php.ini (path same as phpinfo or, xdebug installed path - get when info shows after installation)
 - V2
 ```
 zend_extension=xdebug.so
