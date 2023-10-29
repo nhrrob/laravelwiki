@@ -10,7 +10,7 @@
 ```
 composer create-project laravel/laravel example-app
 sudo chmod -R 0777 storage
-sudo chmod -R 0777 bootstrape/cache
+sudo chmod -R 0777 bootstrap/cache
 ```
 
 <br>
