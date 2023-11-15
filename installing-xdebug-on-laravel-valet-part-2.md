@@ -5,26 +5,73 @@
 
 
 ### Steps
-#### Step 1. TBA
-- TBA
+#### Step 1. Setup profiling with Xdebug
+- Add profiler settings in php.ini (where Xdebug is loaded)
+```
+php --ini
+sudo nano /opt/homebrew/etc/php/8.2/php.ini
+```
+
+Add below settings
+```
+xdebug.mode=profile
+xdebug.output_dir=/tmp/profiles
+xdebug.profiler_output_name=cachegrind.out.%R.%u
+```
+
+- Create directory
+```
+mkdir /tmp/profiles
+```
+
+- Check Xdebug info
+```
+php -r 'xdebug_info();' | less -R
+```
+
+- Restart valet
+```
+valet restart
+```
 
 <br>
 
 
-#### Step 2. TBA
-- TBA
+#### Step 2. Analysing Data
+- We will be using <b>QCacheGrind</b> for analysing data.
+
+- Install (Takes a lot (~20mins) of time for me)
+```
+brew install qcachegrind
+```
+
+- Browse WordPress homepage and few other pages
+
+- Check how many profile files  are created. One file for each request.
+```
+ls -l /tmp/profiles
+```
+
+- Open a file with QCacheGrid
+```
+qcachegrind /tmp/profiles/filename
+```
+
+- QCacheGrind tour
+
+- Check which functions are taking most times and memories.
 
 <br>
 
 ### We are done!
 
-- Congratulations! You have successfully setup Xdebug with Laravel Valet & VSCode. 
+- Congratulations! You have successfully completed analysing profile report using Xdebug with Laravel Valet.
 
 <br>
 
 
 ### Bonus:
-- TBA
+- KCacheGrind for Linux users. QCacheGrind for MacOS and Windows.
 
 <br>
 
