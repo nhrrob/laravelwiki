@@ -42,7 +42,7 @@ A wiki for Laravel. Covers issue solutions as well as basic concepts of Laravel.
 
 - <a href="https://github.com/nhrrob/laravelwiki/blob/master/installing-xdebug-on-laravel-valet-part-1.md" target="_blank">1 Installing Xdebug on macOS, Laravel Valet & VSCode</a>
 
-- <a href="https://github.com/nhrrob/laravelwiki/blob/master/installing-xdebug-on-laravel-valet-part-1.md" target="_blank">2 Profiling PHP Applications with Xdebug</a>
+- <a href="https://github.com/nhrrob/laravelwiki/blob/master/installing-xdebug-on-laravel-valet-part-2.md" target="_blank">2 Profiling PHP Applications with Xdebug</a>
 
 <br>
 
