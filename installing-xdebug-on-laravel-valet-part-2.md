@@ -17,6 +17,7 @@ Add below settings
 xdebug.mode=profile
 xdebug.output_dir=/tmp/profiles
 xdebug.profiler_output_name=cachegrind.out.%R.%u
+xdebug.use_compression=false
 ```
 
 - Create directory
@@ -72,6 +73,7 @@ qcachegrind /tmp/profiles/filename
 
 ### Bonus:
 - KCacheGrind for Linux users. QCacheGrind for MacOS and Windows.
+- For QCacheGrind, turn off compression. Otherwise it will show "unknown file format". xdebug.use_compression=false 
 
 <br>
 
