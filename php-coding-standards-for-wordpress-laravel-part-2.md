@@ -1,5 +1,4 @@
-## 1 Installing Xdebug on macOS, Laravel Valet & VSCode
-
+## 2 PHP Coding Standards | Using PHP CS Fixer (PHP Coding Standards Fixer) in Laravel - Laravel Pint
 
 <br/>Date: October 27, 2023 <br/>
 

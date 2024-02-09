@@ -1,103 +1,75 @@
-## 1 Installing Xdebug on macOS, Laravel Valet & VSCode
+## 1 PHP Coding Standards | Using PHPCS (PHP CodeSniffer) in WordPress
 
-
-<br/>Date: October 27, 2023 <br/>
+<br/>Date: February 09, 2024 <br/>
 
 
 ### Steps
-#### Step 1. Create A Laravel Project
-- Create project
+#### Step 1. Installing PHPCS
+- Github repo: https://github.com/PHPCSStandards/PHP_CodeSniffer/ 
+- Install globally
 ```
-composer create-project laravel/laravel example-app
-sudo chmod -R 0777 storage
-sudo chmod -R 0777 bootstrap/cache
+composer global require "squizlabs/php_codesniffer=*"
+```
+- Now, you can run
+```
+~/.composer/vendor/bin/phpcs
+```
+- Or, simply `phpcs` if environment variable is set. 
+<br>-i shows all the installed rulesets. First one is standard and will be used.
+```
+phpcs -i
+```
+- Use standard argument to use different ruleset.
+```
+~/.composer/vendor/bin/phpcs wp-config.php --standard=PSR12
 ```
 
 <br>
 
 
-#### Step 2. Install pecl on macOS (already installed)
+#### Step 2. Installing WPCS (WordPress Coding Standards)
 
-- Check if pecl is installed (By default installed in macOS)
+- Github repo: https://github.com/WordPress/WordPress-Coding-Standards 
+- Installation commands
 ```
-pecl
+composer global config allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
+composer global require --dev wp-coding-standards/wpcs:"^3.0" 
+```
+- Now WordPress based standards will be added in phpcs.
+```
+phpcs -i
+```
+- You can use annotated ruleset just by adding phpcs.xml in your project root.
+- Or, simply run this command to change the default standard to WordPress.
+```
+phpcs --config-set default_standard WordPress
+```
+
+<br>
+
+#### Step 3. Using PHPCBF (PHP Code Beautifier And Fixer)
+- Doc: https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically 
+- Helps to fix errors automatically
+- Commands to fix errors (assuming environment variable is properly set). From twentytwentyone theme root:
+```
+phpcbf 404.php
+```
+- For details report add psvn. Definitions in the doc url.
+```
+phpcbf -p -s -v -n 404.php
 ```
 
 <br>
 
-#### Step 3. Check PHP version (System and CLI)
-- CLI: Check PHP version and php.ini path (CLI version)
-```
-which php
-php --ini
-```
-- Browser: Check phpinfo() in your project (project/public/index.php)
-- Compare System and CLI PHP installation path (if different, then we need to add custom code in php.ini after Xdebug installation)
+#### Step 4. Setting up PHPCS for VS Code
+- Go to extensions tab and install phpcs extension
+- Now editor will show errors based on wpcs.
 
-<br>
-
-#### Step 4. Install Xdebug using pecl
-a. https://xdebug.org/docs/install
-<br>b. You can verify what your PHP's architecture is with:
-```
-file `which php`
-```
-- arm64e
-```
-arch -arm64 sudo pecl install xdebug
-```
-- x86_64
-```
-arch -x86_64 sudo pecl install xdebug
-```
-- Otherwise
-```
-sudo pecl install xdebug
-```
-c. Verify Xdebug installation => CLI:
-```
-php --version
-php --ini
-```
-d. Verify Xdebug installation => phpinfo in browser
-<br>e. If xdebug not shown, then add some code in php.ini (path same as phpinfo or, xdebug installed path - get when info shows after installation)
-- V2
-```
-zend_extension=xdebug.so
-xdebug.remote_enable=1
-xdebug.remote_log=/tmp/xdebug.log
-```
-- V3
-```
-xdebug.remote_log=/tmp/xdebug.log
-xdebug.mode=debug
-xdebug.start_with_request=yes
-xdebug.discover_client_host=1
-```
-f. Restart everything
-```
-brew services restart php
-valet restart
-```
-g. <b>Troubleshooting</b>:
-- Delete pecl folder if exists or failed to mkdir error on Xdebug installation
-- Copy installed Xdebug path to php.ini
-
-<br>
-
-#### Step 5. Install Chrome and VSCode Extension
-- Chrome: xdebug helper
-- VSCode: php debug by xdebug
-
-<br>
-
-#### Step 6. Start Debugging
-- VSCode from memu => Start Debugging and Select everything from left bottom settings. Then add breakpoints in your code. Create json file if needed (default code).
 <br>
 
 ### We are done!
 
-- Congratulations! You have successfully setup Xdebug with Laravel Valet & VSCode. 
+- Congratulations! You have successfully setup PHPCS (PHP CodeSniffer) in WordPress 
 
 <br>
 
