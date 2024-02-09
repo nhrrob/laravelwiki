@@ -44,9 +44,9 @@ A wiki for Laravel. Covers issue solutions as well as basic concepts of Laravel.
 
 - <a href="https://github.com/nhrrob/laravelwiki/blob/master/installing-xdebug-on-laravel-valet-part-2.md" target="_blank">2 Profiling PHP Applications with Xdebug</a>
 
-- <a href="https://github.com/nhrrob/laravelwiki/blob/master/php-coding-standards-for-wordpress-laravel-part-1.md" target="_blank">1 PHP Coding Standards | Using PHPCS (PHP CodeSniffer) for WordPress</a>
+- <a href="https://github.com/nhrrob/laravelwiki/blob/master/php-coding-standards-for-wordpress-laravel-part-1.md" target="_blank">1 PHP Coding Standards | Using PHPCS (PHP CodeSniffer) in WordPress</a>
 
-- <a href="https://github.com/nhrrob/laravelwiki/blob/master/php-coding-standards-for-wordpress-laravel-part-2.md" target="_blank">2 PHP Coding Standards | Using PHP CS Fixer (PHP Coding Standards Fixer) for Laravel - Laravel Pint</a>
+- <a href="https://github.com/nhrrob/laravelwiki/blob/master/php-coding-standards-for-wordpress-laravel-part-2.md" target="_blank">2 PHP Coding Standards | Using PHP CS Fixer (PHP Coding Standards Fixer) in Laravel - Laravel Pint</a>
 
 <br>
 
