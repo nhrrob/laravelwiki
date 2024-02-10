@@ -4,99 +4,50 @@
 
 
 ### Steps
-#### Step 1. Create A Laravel Project
-- Create project
-```
-composer create-project laravel/laravel example-app
-sudo chmod -R 0777 storage
-sudo chmod -R 0777 bootstrap/cache
-```
+#### Step 1. Installing Laravel Pint
+- Comes by default with the latest Laravel versions.
+- Official Doc: https://laravel.com/docs/10.x/pint 
 
 <br>
 
 
-#### Step 2. Install pecl on macOS (already installed)
+#### Step 2. Using Laravel Pint
 
-- Check if pecl is installed (By default installed in macOS)
+- You may run following commands
 ```
-pecl
+./vendor/bin/pint
 ```
-
-<br>
-
-#### Step 3. Check PHP version (System and CLI)
-- CLI: Check PHP version and php.ini path (CLI version)
+- To fix a single file
 ```
-which php
-php --ini
+./vendor/bin/pint app/Models/User.php
 ```
-- Browser: Check phpinfo() in your project (project/public/index.php)
-- Compare System and CLI PHP installation path (if different, then we need to add custom code in php.ini after Xdebug installation)
-
-<br>
-
-#### Step 4. Install Xdebug using pecl
-a. https://xdebug.org/docs/install
-<br>b. You can verify what your PHP's architecture is with:
+- See detail
 ```
-file `which php`
+./vendor/bin/pint -v 
 ```
-- arm64e
+- Only show errors, no fix
 ```
-arch -arm64 sudo pecl install xdebug
+./vendor/bin/pint --test
 ```
-- x86_64
+- Apply pint on uncommitted changes
 ```
-arch -x86_64 sudo pecl install xdebug
+./vendor/bin/pint --dirty
 ```
-- Otherwise
-```
-sudo pecl install xdebug
-```
-c. Verify Xdebug installation => CLI:
-```
-php --version
-php --ini
-```
-d. Verify Xdebug installation => phpinfo in browser
-<br>e. If xdebug not shown, then add some code in php.ini (path same as phpinfo or, xdebug installed path - get when info shows after installation)
-- V2
-```
-zend_extension=xdebug.so
-xdebug.remote_enable=1
-xdebug.remote_log=/tmp/xdebug.log
-```
-- V3
-```
-xdebug.remote_log=/tmp/xdebug.log
-xdebug.mode=debug
-xdebug.start_with_request=yes
-xdebug.discover_client_host=1
-```
-f. Restart everything
-```
-brew services restart php
-valet restart
-```
-g. <b>Troubleshooting</b>:
-- Delete pecl folder if exists or failed to mkdir error on Xdebug installation
-- Copy installed Xdebug path to php.ini
 
 <br>
 
-#### Step 5. Install Chrome and VSCode Extension
-- Chrome: xdebug helper
-- VSCode: php debug by xdebug
+#### Step 3. Changing rulesel
+- Laravel Pint uses Laravel as default ruleset
+- You may change it by using this command
+```
+pint --preset psr12
+```
 
-<br>
-
-#### Step 6. Start Debugging
-- VSCode from memu => Start Debugging and Select everything from left bottom settings. Then add breakpoints in your code. Create json file if needed (default code).
 <br>
 
 ### We are done!
 
-- Congratulations! You have successfully setup Xdebug with Laravel Valet & VSCode. 
+- Congratulations! You have successfully setup Laravel Pint for laravel projects. 
 
 <br>
 
