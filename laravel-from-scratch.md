@@ -1,6 +1,7 @@
 ## Laravel from Scratch (Building Laravel Get Started Project)
 
 
+<br/>Last Modified: Aug 11, 2024 <br/>
 <br/>Date: May 11, 2021 <br/>
 
 Note: *For sample code follow repository mentioned below (at the end)* <br>
@@ -8,7 +9,7 @@ Note: *For sample code follow repository mentioned below (at the end)* <br>
 
 ### Steps
 #### Step 1. Install Laravel 
-- Laravel 8
+- Laravel 11
 <br>Note: If laravel installed globally (```composer global require laravel/installer```)
 ```
 laravel new blog
@@ -23,13 +24,13 @@ composer create-project --prefer-dist laravel/laravel:^7.0 blog
 <br>
 
 
-#### Step 2. Add DB settings in .env file
+#### Step 2. Add DB settings in .env file (No need. Follow CLI instructions)
 - Create DB and Add in .env file
 
 <br>
 
 
-#### Step 2.1 (Optional) Create virtual host
+#### Step 2.1 (Optional) Create virtual host (use valet. Also no need. Follow CLI instructions)
 - Create vhost for  projectpath/public folder
 - Browse example.rob (virtual host)
 - You can also ignore vhost and simply run
@@ -39,7 +40,7 @@ php artisan serve
 <br>
 
 
-#### Step 3. Add permission to storage folder
+#### Step 3. Add permission to storage folder (May be no need)
 - Storage folder needs write permission
 ```
 sudo chmod -R 0777 storage/
@@ -50,7 +51,7 @@ Note: For Linux and MacOS only
 <br>
 
 
-#### Step 4. Laravel Auth Setup
+#### Step 4. Laravel Auth Setup (May be no need. Follow CLI instructions)
 We will use laravel default auth
 - Laravel 8
 ```
@@ -72,20 +73,18 @@ php artisan migrate
 
 
 #### Step 5. Seed an admin user
-- Add code in run() : database/seeders/DatabaseSeeder.php
-<br>*Dont forget to import User class*
+- Modify code in run() : database/seeders/DatabaseSeeder.php
 ```
-User::create([
-    'name' => 'Nazmul Hasan Robin',
-    'email' => 'admin@admin.com',
-    'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+User::factory()->create([
+    'name' => 'Admin',
+    'email' => 'admin@example.com',
 ]);
 ```
 - Run migration and seed
 ```
 php artisan migrate:fresh --seed
 ```
-- Now, login with admin@admin.com/password
+- Now, login with admin@example.com/password
 
 <br>
 
@@ -99,7 +98,7 @@ php artisan vendor:publish
 <br>
 
 
-#### Step 7. Install Laravel Passport for Rest Api  
+#### Step 7. (Optional) Install Laravel Passport for Rest Api  
 - Nhrrob Crudgenerator generates basic crud as well as Rest crud files. If we want to use rest api then we need laravel passport.
 Its an optional step if we dont need rest api.
 
@@ -112,7 +111,7 @@ php artisan passport:install
 
 <br>
 
-#### Step 8. Clear cache and dump autoload (do it often)  
+#### Step 8. (Optional) Clear cache and dump autoload (do it often)  
 - Clear cache and dump autoload files.
 ```
 sudo chmod -R 0777 storage/

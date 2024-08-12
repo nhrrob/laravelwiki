@@ -42,7 +42,7 @@ use Laravel\Passport\HasApiTokens;
 ```
 <br>
 
-#### Step 5. **Call the passport routes in AuthServiceProvider** <br>
+#### [SKIP] Step 5. **Call the passport routes in AuthServiceProvider** <br>
 Path: **App/Providers/AuthServiceProvider.php**<br>
 - Add in **boot** method <br>
 ``` 
