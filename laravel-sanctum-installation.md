@@ -26,6 +26,72 @@ use Laravel\Sanctum\HasApiTokens;
 ```
 <br>
 
+#### Step 3. **Add routes:**
+Add register login and logout routes in routes/api.php
+
+``` 
+Route::post('register', '\App\Http\Controllers\Api\AuthController@register');
+Route::post('login', '\App\Http\Controllers\Api\AuthController@login');
+
+Route::group(['middleware' => ['auth:sanctum']], function () {
+    Route::post('/logout', '\App\Http\Controllers\Api\AuthController@logout');
+});
+``` 
+
+<br>
+
+#### Step 4. **Add methods in AuthController:**
+Add methods in controller
+``` 
+public function register(Request $request) {
+    $validatedData = $request->validate([
+        'name' => 'required|max:55',
+        'email' => 'email|required|unique:users',
+        // 'password' => 'required|confirmed'
+        'password' => 'required'
+    ]);
+
+    $validatedData['password'] = Hash::make($request->password);
+
+    $user = User::create($validatedData);
+
+    $accessToken = $user->createToken('authToken')->accessToken;
+
+    return response(['user' => $user, 'access_token' => $accessToken], 201);
+}
+
+public function login(Request $request) {
+    $loginData = $request->validate([
+        'email' => 'email|required',
+        'password' => 'required'
+    ]);
+
+    if (!auth()->attempt($loginData)) {
+        return response(['message' => 'User does not exist, please check your details'], 400);
+    }
+
+    // $accessToken = auth()->user()->createToken('authToken')->accessToken;
+    $accessToken = auth()->user()->createToken('authToken')->plainTextToken;
+    // $user = User::where('email', $request->email)->first();
+    // $accessToken = $user->createToken('auth-token')->plainTextToken;
+
+    return response(['user' => auth()->user(), 'access_token' => $accessToken]);
+}
+
+public function logout(Request $request) {
+    auth()->user()->tokens()->delete();
+
+    return [
+        'message' => 'Logged out'
+    ];
+}
+``` 
+
+#### Step 5. **Get Access Token**  
+- Use login request to get access token
+- Add this token as bearer token on each api request.
+<br>
+
 ### We are done!
 
 - Congratulations! You have successfully setup and configure Laravel Sanctum. <br>
