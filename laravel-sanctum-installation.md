@@ -28,13 +28,13 @@ use Laravel\Sanctum\HasApiTokens;
 
 #### Step 3. **Add routes:**
 Add register login and logout routes in routes/api.php
-
+Update Versioning (e.x. V3)
 ``` 
-Route::post('register', '\App\Http\Controllers\Api\AuthController@register');
-Route::post('login', '\App\Http\Controllers\Api\AuthController@login');
+Route::post('register', '\App\Http\Controllers\Api\V1\AuthController@register');
+Route::post('login', '\App\Http\Controllers\Api\V1\AuthController@login');
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
-    Route::post('/logout', '\App\Http\Controllers\Api\AuthController@logout');
+    Route::post('/logout', '\App\Http\Controllers\Api\V1\AuthController@logout');
 });
 ``` 
 
