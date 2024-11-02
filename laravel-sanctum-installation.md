@@ -95,6 +95,7 @@ public function logout(Request $request) {
 - Congratulations! You have successfully setup and configure Laravel Sanctum. <br>
 
 - To build a restful api crud feel free to follow this repo: <br>
+<a href="https://github.com/nhrrob/laravel-11-api-crud">https://github.com/nhrrob/laravel-11-api-crud </a> <br>
 <a href="https://github.com/nhrrob/laravel-10-api-crud">https://github.com/nhrrob/laravel-10-api-crud </a> <br>
 <a href="https://github.com/nhrrob/laravel-8-api-crud">https://github.com/nhrrob/laravel-8-api-crud </a> <br>
 <a href="https://github.com/nhrrob/laravel-7-api-crud">https://github.com/nhrrob/laravel-7-api-crud</a>
