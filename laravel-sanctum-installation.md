@@ -30,7 +30,7 @@ use Laravel\Sanctum\HasApiTokens;
 Add register login and logout routes in routes/api.php
 Update Versioning (e.x. V3)
 ``` 
-Route::post('v1/egister', '\App\Http\Controllers\Api\V1\AuthController@register');
+Route::post('v1/register', '\App\Http\Controllers\Api\V1\AuthController@register');
 Route::post('v1/login', '\App\Http\Controllers\Api\V1\AuthController@login');
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
