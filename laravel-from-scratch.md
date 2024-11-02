@@ -84,7 +84,7 @@ User::factory()->create([
 ```
 php artisan migrate:fresh --seed
 ```
-- Now, login with admin@example.com/password
+- Now, login with admin@admin.com/password
 
 <br>
 
