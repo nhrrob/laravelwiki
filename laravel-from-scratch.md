@@ -77,7 +77,7 @@ php artisan migrate
 ```
 User::factory()->create([
     'name' => 'Admin',
-    'email' => 'admin@example.com',
+    'email' => 'admin@admin.com',
 ]);
 ```
 - Run migration and seed
