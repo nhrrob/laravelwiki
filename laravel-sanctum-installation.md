@@ -72,8 +72,6 @@ public function login(Request $request) {
 
     // $accessToken = auth()->user()->createToken('authToken')->accessToken;
     $accessToken = auth()->user()->createToken('authToken')->plainTextToken;
-    // $user = User::where('email', $request->email)->first();
-    // $accessToken = $user->createToken('auth-token')->plainTextToken;
 
     return response(['user' => auth()->user(), 'access_token' => $accessToken]);
 }
