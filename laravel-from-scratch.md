@@ -98,7 +98,7 @@ php artisan vendor:publish
 <br>
 
 
-#### Step 7. (Optional) Install Laravel Passport for Rest Api  
+#### Step 7. (Optional) Install Laravel Passport for Rest Api or Sanctum (https://github.com/nhrrob/laravelwiki/blob/master/laravel-sanctum-installation.md)
 - Nhrrob Crudgenerator generates basic crud as well as Rest crud files. If we want to use rest api then we need laravel passport.
 Its an optional step if we dont need rest api.
 
