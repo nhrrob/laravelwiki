@@ -52,6 +52,8 @@ Note: For Linux and MacOS only
 
 
 #### Step 4. Laravel Auth Setup (May be no need. Follow CLI instructions)
+=== Use Breeze ===
+
 We will use laravel default auth
 - Laravel 8
 ```
