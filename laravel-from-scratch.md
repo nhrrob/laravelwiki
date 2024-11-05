@@ -171,8 +171,8 @@ Note: If you want to create crud by your own, you may follow these repositories 
 
 #### Step 10. Test Api using Postman
 - Thanks to <a href="https://github.com/nhrrob/crudgenerator" target="_blank">nhrrob/crudgenerator</a> to make it happen!
-- We need to add Api auth routes first as crudgenerator doesn't add it by itself but provide link to copy the code.
-- Add below auth routes to routes/api.php (above your generated routes)
+- (Probably no need on latest crudgenerator) We need to add Api auth routes first as crudgenerator doesn't add it by itself but provide link to copy the code.
+- (Probably no need on latest crudgenerator) Add below auth routes to routes/api.php (above your generated routes)
 Link: https://gist.github.com/nhrrob/fbc0857c3b5ed8c03ca8cc4ebdead749 
 ```
 Route::post('register', '\App\Http\Controllers\Api\AuthController@register');
