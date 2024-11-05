@@ -231,7 +231,7 @@ php artisan passport:install
 <br>
 
 
-#### Step 14. Add NHR CSS Helper 
+#### Step 14. (Optional - Use Tailwind CSS) Add NHR CSS Helper 
 - Copy below gist code to public/css/nhrrob-css-helper.css file
 <br>CSS Link: <a href="https://gist.github.com/nhrrob/ce5ef7e921104feff1fc3bb8c06c75f3" target="_blank">Gist: NHRRob CSS Helper</a> 
 
