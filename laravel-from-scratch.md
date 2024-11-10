@@ -220,7 +220,7 @@ php artisan crud:generator --admin
 ```
 $table->string('title');
 ```
-- Run migration and seed demo data
+- Run migration and seed demo data or just run migration without refreshing and skip passport command if not used
 ```
 php artisan migrate:fresh --seed
 php artisan passport:install
