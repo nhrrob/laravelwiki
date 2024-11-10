@@ -4,7 +4,7 @@
 
 ### Steps
 #### Step 1. **Install package:** 
-- Install command:
+- Install command: [skip permission command if not needed]
 ```
 composer require spatie/laravel-permission
 php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
