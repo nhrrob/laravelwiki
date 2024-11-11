@@ -98,7 +98,7 @@ Note: Dont forget to update storage folder often as spatie uses cache
 <br>
 
 #### Step 7: Super Admin configuration
-- Link: <a href="https://spatie.be/docs/laravel-permission/v3/basic-usage/super-admin">https://spatie.be/docs/laravel-permission/v3/basic-usage/super-admin</a>
+- Link: <a href="https://spatie.be/docs/laravel-permission/v6/basic-usage/super-admin">https://spatie.be/docs/laravel-permission/v3/basic-usage/super-admin</a>
 - Add below code in boot method of AuthServiceProvider
 ```
 Gate::before(function ($user, $ability) {
