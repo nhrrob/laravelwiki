@@ -70,12 +70,27 @@ $this->middleware('permission:user delete')->only('destroy');
 <br>
 
 
-#### Step 6: Update app/Http/kernal.php => $routeMiddleWare
+#### Step 6: Update app/Http/kernal.php => $routeMiddleWare 
 ```
 'permission' => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
 'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
 'role_or_permission' => \Spatie\Permission\Middlewares\RoleOrPermissionMiddleware::class,
 
+```
+
+For laravel 11, bootstrap/app.php (`->withMiddleware(function (Middleware $middleware) {`)
+```
+//
+// $middleware->append(\Spatie\Permission\Middlewares\PermissionMiddleware::class);
+// $middleware->append(\Spatie\Permission\Middlewares\RoleMiddleware::class);
+// $middleware->append(\Spatie\Permission\Middlewares\RoleOrPermissionMiddleware::class);
+
+$middleware->alias([
+    // 'subscribed' => EnsureUserIsSubscribed::class,
+    'permission' => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
+    'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
+    'role_or_permission' => \Spatie\Permission\Middlewares\RoleOrPermissionMiddleware::class,
+]);
 ```
 
 Note: Dont forget to update storage folder often as spatie uses cache
