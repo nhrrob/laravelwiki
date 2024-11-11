@@ -156,7 +156,7 @@ php artisan migrate
 Note: If you want to create crud by your own, you may follow these repositories instead of creating by generator.
 
 1. Two rest api crud repositories: <br>
-<a href="https://github.com/nhrrob/laravel-11-api-crud" target="_blank">https://github.com/nhrrob/larave-l1-api-crud </a> <br>
+<a href="https://github.com/nhrrob/laravel-11-api-crud" target="_blank">https://github.com/nhrrob/larave-11-api-crud </a> <br>
 <a href="https://github.com/nhrrob/laravel-8-api-crud" target="_blank">https://github.com/nhrrob/laravel-8-api-crud </a> <br>
 <a href="https://github.com/nhrrob/laravel-7-api-crud" target="_blank">https://github.com/nhrrob/laravel-7-api-crud</a><br>
 
