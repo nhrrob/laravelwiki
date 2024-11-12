@@ -97,16 +97,11 @@ $this->middleware('permission:user delete')->only('destroy');
 
 For laravel 11, bootstrap/app.php (`->withMiddleware(function (Middleware $middleware) {`)
 ```
-//
-// $middleware->append(\Spatie\Permission\Middlewares\PermissionMiddleware::class);
-// $middleware->append(\Spatie\Permission\Middlewares\RoleMiddleware::class);
-// $middleware->append(\Spatie\Permission\Middlewares\RoleOrPermissionMiddleware::class);
-
 $middleware->alias([
     // 'subscribed' => EnsureUserIsSubscribed::class,
-    'permission' => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
-    'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
-    'role_or_permission' => \Spatie\Permission\Middlewares\RoleOrPermissionMiddleware::class,
+    'permission' => \Spatie\Permission\Middleware\PermissionMiddleware::class,
+    'role' => \Spatie\Permission\Middleware\RoleMiddleware::class,
+    'role_or_permission' => \Spatie\Permission\Middleware\RoleOrPermissionMiddleware::class,
 ]);
 ```
 
