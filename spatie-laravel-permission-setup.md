@@ -60,7 +60,7 @@ php artisan migrate:fresh --seed
 - laravel 11
   ```
   abstract class Controller extends \Illuminate\Routing\Controller
-{
+  {
     public function __construct($permissionGroup = '', $isApi=0)
     {
         if($permissionGroup != ''){
@@ -72,7 +72,7 @@ php artisan migrate:fresh --seed
             $this->middleware("permission:$permissionGroup delete")->only('destroy');
         }
     }
-}
+  }
   ```
 - Add below code in your crud controller **__construct** method
 <br>Example: **user** permission group
